@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4c1d95" />
+      <stop offset="50%" stop-color="#6d28d9" />
+      <stop offset="100%" stop-color="#312e81" />
+    </linearGradient>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="50%" stop-color="#7e22ce" />
+      <stop offset="100%" stop-color="#581c87" />
+    </linearGradient>
+    <linearGradient id="lidGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="50%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#facc15" />
+      <stop offset="100%" stop-color="#eab308" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded rect -->
+  <rect width="512" height="512" rx="110" fill="url(#bgGrad)" />
+
+  <!-- Magical aura stars in background -->
+  <circle cx="256" cy="270" r="170" fill="#f43f5e" opacity="0.2" filter="url(#glow)"/>
+  <circle cx="256" cy="260" r="130" fill="#fbbf24" opacity="0.25" filter="url(#glow)"/>
+
+  <!-- Magic Sparkles around the box -->
+  <path d="M120 140 L126 156 L142 162 L126 168 L120 184 L114 168 L98 162 L114 156 Z" fill="#fde047" />
+  <path d="M390 120 L395 133 L408 138 L395 143 L390 156 L385 143 L372 138 L385 133 Z" fill="#f472b6" />
+  <path d="M410 360 L414 372 L426 376 L414 380 L410 392 L406 380 L394 376 L406 372 Z" fill="#38bdf8" />
+  <path d="M96 340 L100 350 L110 354 L100 358 L96 368 L92 358 L82 354 L92 350 Z" fill="#4ade80" />
+
+  <!-- Magic Box Body -->
+  <g transform="translate(0, 20)">
+    <!-- Base Box -->
+    <rect x="116" y="240" width="280" height="190" rx="34" fill="url(#boxGrad)" stroke="#c084fc" stroke-width="6"/>
+    <!-- Front panel shimmer / detail -->
+    <rect x="136" y="260" width="240" height="150" rx="24" fill="#6b21a8" opacity="0.6"/>
+
+    <!-- Decorative golden bands -->
+    <rect x="180" y="240" width="20" height="190" fill="url(#goldGrad)" opacity="0.85"/>
+    <rect x="312" y="240" width="20" height="190" fill="url(#goldGrad)" opacity="0.85"/>
+
+    <!-- Magical Star Emblem on Chest -->
+    <circle cx="256" cy="335" r="44" fill="#4c1d95" stroke="url(#goldGrad)" stroke-width="6"/>
+    <path d="M256 305 L266 327 L290 330 L272 346 L277 370 L256 357 L235 370 L240 346 L222 330 L246 327 Z" fill="url(#goldGrad)" filter="url(#glow)"/>
+
+    <!-- Box Lid -->
+    <rect x="96" y="175" width="320" height="75" rx="22" fill="url(#lidGrad)" stroke="#fbcfe8" stroke-width="6"/>
+    <rect x="120" y="185" width="272" height="18" rx="9" fill="#ffffff" opacity="0.3"/>
+
+    <!-- Lid clasp / gem -->
+    <circle cx="256" cy="220" r="18" fill="url(#goldGrad)" stroke="#ffffff" stroke-width="4"/>
+    <circle cx="256" cy="220" r="8" fill="#ec4899"/>
+  </g>
+</svg>

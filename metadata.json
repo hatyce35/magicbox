@@ -1,0 +1,6 @@
+{
+  "name": "MAGIC BOX",
+  "description": "A magical 2D discovery and combination game for children where players combine elements to create wonders.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
